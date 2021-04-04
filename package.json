@@ -1,6 +1,6 @@
 {
   "name": "hdrToBabylonEnv",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "converts .hdr files in directory to .env for babylonjs",
   "repository": "https://github.com/HugoMcPhee/hdr-to-babylon-env",
   "main": "index.js",
