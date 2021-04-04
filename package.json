@@ -1,0 +1,22 @@
+{
+  "name": "hdrToBabylonEnv",
+  "version": "1.0.0",
+  "description": "converts .hdr files in directory to .env for babylonjs",
+  "repository": "https://github.com/HugoMcPhee/hdr-to-babylon-env",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "./index.js",
+  "keywords": [
+    "babylonjs",
+    "hdr",
+    "env"
+  ],
+  "author": "Hugo McPhee",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-paths": "^1.0.1",
+    "puppeteer-core": "^8.0.0"
+  }
+}
