@@ -33,9 +33,8 @@ var path = require("path");
   await Promise.all(files.map((fileName) => checkDirectoryItem(fileName)));
 
   let launchOptions = {
-    headless: false,
-    executablePath: chromePaths.chrome, // because we are using puppeteer-core so we must define this option
-    args: ["--start-maximized"],
+    headless: true,
+    executablePath: chromePaths.chrome,
   };
 
   const browser = await puppeteer.launch(launchOptions);
