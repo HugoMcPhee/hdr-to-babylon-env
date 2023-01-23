@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const puppeteer = require("puppeteer-core");
+const puppeteer = require("puppeteer");
 const chromePaths = require("chrome-paths");
 const fs = require("fs").promises;
 var path = require("path");
@@ -36,12 +36,13 @@ var path = require("path");
   await Promise.all(files.map((fileName) => checkDirectoryItem(fileName)));
 
   let launchOptions = {
-    headless: false,
-    executablePath: chromePaths.chrome,
-    args: [`--window-size=100,100`],
+    headless: true,
+    // executablePath: chromePaths.chrome,
+    // args: [`--window-size=100,100`],
   };
 
-  const browser = await puppeteer.launch(launchOptions);
+  // const browser = await puppeteer.launch(launchOptions);
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.addScriptTag({ url: "https://cdn.babylonjs.com/babylon.js" });
 
@@ -106,9 +107,10 @@ var path = require("path");
           true
         );
         await waitForSceneReady();
-        const arrayBuffer = await BABYLON.EnvironmentTextureTools.CreateEnvTextureAsync(
-          environment
-        );
+        const arrayBuffer =
+          await BABYLON.EnvironmentTextureTools.CreateEnvTextureAsync(
+            environment
+          );
         var blob = new Blob([arrayBuffer], { type: "octet/stream" });
         const binaryFileResult = await getBlobAsBinaryString(blob);
         environment.dispose();

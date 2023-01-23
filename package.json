@@ -17,6 +17,6 @@
   "license": "MIT",
   "dependencies": {
     "chrome-paths": "^1.0.1",
-    "puppeteer-core": "^8.0.0"
+    "puppeteer": "^19.5.2"
   }
 }
