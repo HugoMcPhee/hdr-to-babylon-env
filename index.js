@@ -45,7 +45,7 @@ var BABYLON = require("babylonjs");
   // const browser = await puppeteer.launch(launchOptions);
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.addScriptTag({ url: "https://cdn.babylonjs.com/babylon.js" });
+  // await page.addScriptTag({ url: "https://cdn.babylonjs.com/babylon.js" });
 
   console.log("found");
   console.log(hdrFilesData.map((item) => item.name));
