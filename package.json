@@ -16,6 +16,7 @@
   "author": "Hugo McPhee",
   "license": "MIT",
   "dependencies": {
+    "babylonjs": "^5.54.0",
     "chrome-paths": "^1.0.1",
     "puppeteer": "^19.5.2"
   }

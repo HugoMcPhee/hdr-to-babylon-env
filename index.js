@@ -4,6 +4,7 @@ const puppeteer = require("puppeteer");
 const chromePaths = require("chrome-paths");
 const fs = require("fs").promises;
 var path = require("path");
+var BABYLONJS = require("babylonjs");
 
 (async () => {
   // const nodeScriptPath = __dirname;
