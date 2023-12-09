@@ -106,9 +106,10 @@ var path = require("path");
           true
         );
         await waitForSceneReady();
-        const arrayBuffer = await BABYLON.EnvironmentTextureTools.CreateEnvTextureAsync(
-          environment
-        );
+        const arrayBuffer =
+          await BABYLON.EnvironmentTextureTools.CreateEnvTextureAsync(
+            environment
+          );
         var blob = new Blob([arrayBuffer], { type: "octet/stream" });
         const binaryFileResult = await getBlobAsBinaryString(blob);
         environment.dispose();
